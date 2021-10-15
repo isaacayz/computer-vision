@@ -5,7 +5,14 @@ cap = cv2.VideoCapture(0)
 
 while True:
     ret, frame = cap.read()
-    cv2.imshow('Frame', frame)
+    width = int(cap.get(3))
+    height = int(cap.get(4))
+    
+    image = np.zeros(frame.shape, np.uint8)
+    smaller_frame = cv2.resize(frame, (0,0), fx=0.5, fy=0.5)
+
+
+    cv2.imshow('Frame', smaller_frame)
     if cv2.waitKey(1) == ord('x'):
         break
 
