@@ -15,21 +15,27 @@ import numpy as np
 video_capture = cv2.VideoCapture(0)
 
 # Load a sample picture and learn how to recognize it.
-isaac_image = face_recognition.load_image_file("flask-project/Isaac/isaac.jpg",mode='RGB') #('Isaac/isaac.jpg')
+isaac_image = face_recognition.load_image_file("flask-project/images/isaac.jpg")
 isaac_face_encoding = face_recognition.face_encodings(isaac_image)[0]
 
 # Load a second sample picture and learn how to recognize it.
-trump_image = face_recognition.load_image_file("flask-project/Trump/trump.jpg")
+trump_image = face_recognition.load_image_file("flask-project/images/trump.jpg")
 trump_face_encoding = face_recognition.face_encodings(trump_image)[0]
+
+# Load a third sample picture and learn how to recognize it.
+damilare_image = face_recognition.load_image_file("flask-project/images/damilare.jpeg")
+damilare_face_encoding = face_recognition.face_encodings(damilare_image)[0]
 
 # Create arrays of known face encodings and their names
 known_face_encodings = [
     isaac_face_encoding,
-    trump_face_encoding
+    trump_face_encoding,
+    damilare_face_encoding
 ]
 known_face_names = [
     "Daddy Isaac",
-    "Donald Trump"
+    "Donald Trump",
+    "Damilare Peter"
 ]
 
 # Initialize some variables
