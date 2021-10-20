@@ -23,23 +23,40 @@ dunni_image = face_recognition.load_image_file("flask-project/images/dunni.jpeg"
 juliet_image = face_recognition.load_image_file("flask-project/images/juliet.jpeg")
 marcus_image = face_recognition.load_image_file("flask-project/images/marcus.jpeg")
 martins_image = face_recognition.load_image_file("flask-project/images/martins.jpeg")
-ayobami_image = face_recognition.load_image_file("flask-project/images/ayobami.jpeg")
+#ayobami_image = face_recognition.load_image_file("flask-project/images/ayobami.jpeg")
 
 # Load all loaded images using face_encodings.
 isaac_face_encoding = face_recognition.face_encodings(isaac_image)[0]
 trump_face_encoding = face_recognition.face_encodings(trump_image)[0]
 damilare_face_encoding = face_recognition.face_encodings(damilare_image)[0]
+arabella_face_encoding = face_recognition.face_encodings(arabella_image)[0]
+dunni_face_encoding = face_recognition.face_encodings(dunni_image)[0]
+juliet_face_encoding = face_recognition.face_encodings(juliet_image)[0]
+marcus_face_encoding = face_recognition.face_encodings(marcus_image)[0]
+martins_face_encoding = face_recognition.face_encodings(martins_image)[0]
+#ayobami_face_encoding = face_recognition.face_encodings(ayobami_image)[0]
 
 # Create arrays of known face encodings and their names
 known_face_encodings = [
     isaac_face_encoding,
     trump_face_encoding,
-    damilare_face_encoding
+    damilare_face_encoding,
+    arabella_face_encoding,
+    dunni_face_encoding,
+    juliet_face_encoding,
+    marcus_face_encoding,
+    martins_face_encoding
 ]
 known_face_names = [
     "Daddy Isaac",
     "Donald Trump",
-    "Damilare Peter"
+    "Damilare Peter",
+    "Arabella Deborah",
+    "Dunni Odutayo",
+    "Juliet Membis",
+    "Marcus Okugbeni",
+    "Martins Okugbeni",
+    "Ayobami Solanke"
 ]
 
 # Initialize some variables
