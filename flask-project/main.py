@@ -14,16 +14,20 @@ import numpy as np
 # Get a reference to webcam #0 (the default one)
 video_capture = cv2.VideoCapture(0)
 
-# Load a sample picture and learn how to recognize it.
+# Load all images from the image folder.
 isaac_image = face_recognition.load_image_file("flask-project/images/isaac.jpg")
-isaac_face_encoding = face_recognition.face_encodings(isaac_image)[0]
-
-# Load a second sample picture and learn how to recognize it.
 trump_image = face_recognition.load_image_file("flask-project/images/trump.jpg")
-trump_face_encoding = face_recognition.face_encodings(trump_image)[0]
-
-# Load a third sample picture and learn how to recognize it.
 damilare_image = face_recognition.load_image_file("flask-project/images/damilare.jpeg")
+arabella_image = face_recognition.load_image_file("flask-project/images/arabella.jpg")
+dunni_image = face_recognition.load_image_file("flask-project/images/dunni.jpeg")
+juliet_image = face_recognition.load_image_file("flask-project/images/juliet.jpeg")
+marcus_image = face_recognition.load_image_file("flask-project/images/marcus.jpeg")
+martins_image = face_recognition.load_image_file("flask-project/images/martins.jpeg")
+ayobami_image = face_recognition.load_image_file("flask-project/images/ayobami.jpeg")
+
+# Load all loaded images using face_encodings.
+isaac_face_encoding = face_recognition.face_encodings(isaac_image)[0]
+trump_face_encoding = face_recognition.face_encodings(trump_image)[0]
 damilare_face_encoding = face_recognition.face_encodings(damilare_image)[0]
 
 # Create arrays of known face encodings and their names
